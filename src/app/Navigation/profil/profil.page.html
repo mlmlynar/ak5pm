@@ -6,11 +6,66 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Profil</ion-title>
     </ion-toolbar>
   </ion-header>
-  
+  <ion-grid>
+    <!--<ion-row>
+      <ion-col size="12">
+        <-- Fotka -->
+        <!--<ion-img *ngIf="capturedImage" [src]="capturedImage" alt="Profilová fotka"></ion-img>
+        <ion-button expand="full" (click)="takePicture()">Odfoť sa</ion-button>
+      </ion-col>
+    </ion-row> -->
+
+    <ion-row>
+      <ion-col size="12">
+        <!-- Meno -->
+        <ion-item>
+          <ion-label position="floating">Meno</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <!-- Priezvisko -->
+        <ion-item>
+          <ion-label position="floating">Priezvisko</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <!-- Telefón -->
+        <ion-item>
+          <ion-label position="floating">Telefón</ion-label>
+          <ion-input type="tel"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <!-- Email -->
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="full">Uložiť</ion-button>
+      </ion-col>  
+    </ion-row>
+
+
+  </ion-grid>
 </ion-content>

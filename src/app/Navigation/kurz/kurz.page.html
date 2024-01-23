@@ -10,4 +10,55 @@
       <ion-title size="large">Kurzová kalkulačka</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-grid>
+    
+    <!-- hodnota -->
+    <ion-row>
+      <ion-col size="12">
+        
+        <ion-item>
+          <ion-label position="floating">Hodnota</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <!-- Z meny-->
+    <ion-row>
+      <ion-col size="12">        
+        <ion-list>
+          <ion-item>
+            <ion-select aria-label="fruit" placeholder="Z">
+              <ion-select-option value="euro">Euro</ion-select-option>
+              <ion-select-option value="oranges">Americký dollár</ion-select-option>
+              <ion-select-option value="oranges">Britská libra</ion-select-option>
+              <ion-select-option value="bananas">Česká koruna</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <!-- Do meny-->
+    <ion-row>
+      <ion-col size="12">
+        <ion-list>
+          <ion-item>
+            <ion-select aria-label="fruit" placeholder="Do">
+              <ion-select-option value="euro">Euro</ion-select-option>
+              <ion-select-option value="oranges">Americký dollár</ion-select-option>
+              <ion-select-option value="oranges">Britská libra</ion-select-option>
+              <ion-select-option value="bananas">Česká koruna</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="full">Previesť</ion-button>
+      </ion-col>  
+    </ion-row>
+
+
+  </ion-grid>
 </ion-content>
