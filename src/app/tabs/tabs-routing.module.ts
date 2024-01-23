@@ -21,14 +21,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/Navigation/profil/profil',
+        redirectTo: '/tabs/profil',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/Navigation/profil/profil',
+    redirectTo: '/tabs/profil',
     pathMatch: 'full'
   }
 ];
