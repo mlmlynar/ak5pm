@@ -16,10 +16,14 @@
     <ion-row>
       <ion-col size="12">
         
-        <ion-item>
-          <ion-label position="floating">Hodnota</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
+      
+        <ion-input type="number"  
+            [(ngModel)]="hodnota" 
+            label="Suma" 
+            label-placement="floating" 
+            fill="solid" 
+            placeholder="Zadajte hodnotu"></ion-input>
+       
       </ion-col>
     </ion-row>
     <!-- Z meny-->
@@ -27,7 +31,7 @@
       <ion-col size="12">        
         <ion-list>
           <ion-item>
-            <ion-select aria-label="fruit" placeholder="Z">
+            <ion-select aria-label="fruit" placeholder="Z"  [(ngModel)]="zmeny">
               <ion-select-option value="euro">Euro</ion-select-option>
               <ion-select-option value="oranges">Americký dollár</ion-select-option>
               <ion-select-option value="oranges">Britská libra</ion-select-option>
@@ -42,7 +46,7 @@
       <ion-col size="12">
         <ion-list>
           <ion-item>
-            <ion-select aria-label="fruit" placeholder="Do">
+            <ion-select aria-label="fruit" placeholder="Do" [(ngModel)]="domeny">
               <ion-select-option value="euro">Euro</ion-select-option>
               <ion-select-option value="oranges">Americký dollár</ion-select-option>
               <ion-select-option value="oranges">Britská libra</ion-select-option>
@@ -55,7 +59,7 @@
 
     <ion-row>
       <ion-col size="12">
-        <ion-button expand="full">Previesť</ion-button>
+        <ion-button expand="full" (click)="preved()">Previesť</ion-button>
       </ion-col>  
     </ion-row>
 

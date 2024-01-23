@@ -9,7 +9,15 @@ export class ProfilPage implements OnInit {
 
   constructor() { }
 
+  meno: String = ''
+  priezvisko: String = ''
+  telefon: String = ''
+  email: String =''
+
   ngOnInit() {
   }
-
+  
+  save(){
+    
+  }
 }
