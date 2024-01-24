@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HistoryServiceService } from 'src/app/service/history.service';
 
 @Component({
   selector: 'app-history',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryPage implements OnInit {
 
-  constructor() { }
+  storedData: Array<any> = [];
+  
+  constructor(private storage: HistoryServiceService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+
+        
+  }
+  async ionViewDidEnter(){
+
+    const storedData = await this.storage.get('history');
+    if(storedData){ 
+      this.storedData = JSON.parse(storedData);
+    }
+    
   }
 
 }
