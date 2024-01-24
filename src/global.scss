@@ -24,3 +24,19 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+@font-face {
+    font-family: 'myFont';
+    src: url('./assets/fonts/myfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+ion-toolbar {
+    font-family: 'myFont', sans-serif;
+    font-size: 38px !important;
+    text-align: center;
+    --background: #4494d4;
+    color:#FFF;
+  }
+  ion-tab-bar{
+    --background: #c8e7ff;
+  }
