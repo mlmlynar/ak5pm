@@ -23,6 +23,15 @@ export class ProfilPage implements OnInit {
   ngOnInit() {
   }
   async ionViewDidEnter(){
+    const jePrve = await this.storage.get('prveSpustenie');
+   
+    if (!jePrve) {
+      this.navCtrl.navigateRoot('/prve-spustenie');
+      console.log('je');
+      await this.storage.set('prveSpustenie','druhe');
+    }
+    
+    console.log(jePrve);
     const storedMeno = await this.storage.get('meno');
     const storedPriezvisko = await this.storage.get('priezvisko');
     const storedTelefon = await this.storage.get('telefon');

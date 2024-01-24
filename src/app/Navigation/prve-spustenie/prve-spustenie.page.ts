@@ -36,18 +36,21 @@ export class PrveSpusteniePage implements OnInit {
       const priezviskoControl = this.profilForm.get('priezvisko');
       const telefonControl = this.profilForm.get('telefon');
       const emailControl = this.profilForm.get('email');
+      
       if (menoControl && priezviskoControl && telefonControl && emailControl) {
         await this.storage.set('meno',menoControl.value);
         await this.storage.set('priezvisko',priezviskoControl.value);
         await this.storage.set('telefon',telefonControl.value);
         await this.storage.set('email',emailControl.value);
+        
+        let jePrve = await this.storage.get('prveSpustenie');
+        console.log(jePrve);
 
-
-        await this.storage.set('prveSpustenie',"false");
+        
         this.navCtrl.navigateRoot('/tabs/profil');
       }
       
-      // Formulár je platný, môžete pokračovať s odoslaním
+      
     }
   }
 
