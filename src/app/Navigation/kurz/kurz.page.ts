@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CurrencyAPIService } from 'src/app/api/currency-api.service';
-import { HistoryServiceService } from 'src/app/service/history.service';
+import { CurrencyAPIService } from 'src/app/service/api/currency-api.service';
+import { HistoryServiceService } from 'src/app/service/storage/history.service';
 
 @Component({
   selector: 'app-kurz',
