@@ -17,6 +17,14 @@ const routes: Routes = [
   {
     path: 'history',
     loadChildren: () => import('./Navigation/history/history.module').then( m => m.HistoryPageModule)
+  },
+  {
+    path: 'profile-form',
+    loadChildren: () => import('./Navigation/profile-form/profile-form.module').then( m => m.ProfileFormPageModule)
+  },
+  {
+    path: 'prve-spustenie',
+    loadChildren: () => import('./Navigation/prve-spustenie/prve-spustenie.module').then( m => m.PrveSpusteniePageModule)
   }
 ];
 @NgModule({

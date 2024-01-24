@@ -19,6 +19,7 @@ const routes: Routes = [
         path: 'history',
         loadChildren: () => import('../Navigation/history/history.module').then(m => m.HistoryPageModule)
       },
+      
       {
         path: '',
         redirectTo: '/tabs/profil',

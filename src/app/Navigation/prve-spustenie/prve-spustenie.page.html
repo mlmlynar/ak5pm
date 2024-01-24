@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Vitajte na tejto stránke</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Vitajte</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    
+    <form [formGroup]="profilForm" (ngSubmit)="sendForm()">
+      <ion-row>
+        <ion-col size="12">
+          <!-- Meno -->
+          
+          <ion-input 
+          label="Meno" 
+          label-placement="floating" 
+          fill="outline" 
+          placeholder="Zadajte meno"
+          formControlName="meno" 
+          type="text"></ion-input>
+          
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <!-- Priezvisko -->
+          
+          <ion-input 
+              label="Priezvisko" 
+              label-placement="floating" 
+              fill="outline" 
+              placeholder="Zadajte priezvisko"
+              formControlName="priezvisko" 
+              type="text"
+              ></ion-input>
+          
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <!-- Telefón -->
+          
+          <ion-input 
+              label="Telefón" 
+              label-placement="floating" 
+              fill="outline" 
+              placeholder="Zadajte telefón"
+              [(ngModel)]="telefon" 
+              type="text"
+              ></ion-input>
+          
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <!-- Email -->
+          
+          <ion-input 
+              label="Emal" 
+              label-placement="floating" 
+              fill="outline" 
+              placeholder="Zadajte email"
+              [(ngModel)]="email" 
+              type="email"
+              ></ion-input>
+          
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button expand="full" type="submit" [disabled]="!profilForm.valid">Uložiť</ion-button>
+        </ion-col>  
+      </ion-row>
+    </form>
+
+
+  </ion-grid>
+</ion-content>

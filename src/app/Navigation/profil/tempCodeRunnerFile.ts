@@ -1,7 +1,5 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProfileService } from 'src/app/service/storage/profile.service';
-import { NavController } from '@ionic/angular';
-
 
 @Component({
   selector: 'app-profil',
@@ -10,10 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class ProfilPage implements OnInit {
 
-  constructor(
-    private storage:ProfileService,
-    private navCtrl: NavController
-    ) { }
+  constructor(private storage:ProfileService) { }
   
   meno: String = ''
   priezvisko: String = ''
@@ -40,7 +35,14 @@ export class ProfilPage implements OnInit {
       this.telefon = storedTelefon;
     }
   }
-  editProfile(){      
-    this.navCtrl.navigateForward('/profile-form');
+  save(){ 
+    this.storage.set('meno',this.meno);
+    this.storage.set('priezvisko',this.priezvisko);
+    this.storage.set('telefon',this.telefon);
+    this.storage.set('email',this.email);
+    
+    
+     
+     
   }
 }
