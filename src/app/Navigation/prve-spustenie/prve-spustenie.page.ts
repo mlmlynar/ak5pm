@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular';
 import { ProfileService } from 'src/app/service/storage/profile.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-prve-spustenie',
   templateUrl: './prve-spustenie.page.html',
@@ -10,8 +11,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class PrveSpusteniePage implements OnInit {
 
+ 
   profilForm: FormGroup;
-
   constructor(
     private storage:ProfileService,
     private navCtrl: NavController,
@@ -40,10 +41,13 @@ export class PrveSpusteniePage implements OnInit {
         await this.storage.set('priezvisko',priezviskoControl.value);
         await this.storage.set('telefon',telefonControl.value);
         await this.storage.set('email',emailControl.value);
+
+
+        await this.storage.set('prveSpustenie',"false");
+        this.navCtrl.navigateRoot('/tabs/profil');
       }
+      
       // Formulár je platný, môžete pokračovať s odoslaním
-    } else {
-      // Formulár nie je platný, možno zobraziť chyby alebo nejaký feedback
     }
   }
 

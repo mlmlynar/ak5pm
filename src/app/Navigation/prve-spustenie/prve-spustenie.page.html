@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Vitajte na tejto stránke</ion-title>
+    <ion-title style="text-align: center;">Vitajte v aplikácii AK5PM</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Vitajte</ion-title>
+      <ion-title size="large">Vitajte v aplikácii AK5PM</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-grid>
@@ -18,7 +18,7 @@
           <!-- Meno -->
           
           <ion-input 
-          label="Meno" 
+          label="Meno (Povinne)" 
           label-placement="floating" 
           fill="outline" 
           placeholder="Zadajte meno"
@@ -33,7 +33,7 @@
           <!-- Priezvisko -->
           
           <ion-input 
-              label="Priezvisko" 
+              label="Priezvisko (Povinne)" 
               label-placement="floating" 
               fill="outline" 
               placeholder="Zadajte priezvisko"
@@ -49,11 +49,11 @@
           <!-- Telefón -->
           
           <ion-input 
-              label="Telefón" 
+              label="Telefón (Povinne)" 
               label-placement="floating" 
               fill="outline" 
               placeholder="Zadajte telefón"
-              [(ngModel)]="telefon" 
+              formControlName="telefon" 
               type="text"
               ></ion-input>
           
@@ -65,11 +65,11 @@
           <!-- Email -->
           
           <ion-input 
-              label="Emal" 
+              label="Email (Povinne)" 
               label-placement="floating" 
               fill="outline" 
               placeholder="Zadajte email"
-              [(ngModel)]="email" 
+              formControlName="email" 
               type="email"
               ></ion-input>
           

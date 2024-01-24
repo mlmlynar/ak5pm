@@ -16,7 +16,7 @@ export class AppComponent {
   }
   async prveSpustenie() {
 
-    const jePrve = await this.storage.get('spustenie');
+    const jePrve = await this.storage.get('prveSpustenie');
 
     if (jePrve == "false") {
       this.navCtrl.navigateRoot('/tabs/profil');
